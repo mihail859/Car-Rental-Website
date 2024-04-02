@@ -1,0 +1,54 @@
+header {
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    padding: 35px; /* Padding around the content */
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center items vertically */
+  }
+  
+  h1 {
+    font-size: 48px; /* Increased font size */
+    margin: 0; /* Remove default margin */
+  }
+  
+  nav {
+    display: flex; /* Use flexbox */
+  }
+  
+  nav a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    margin-right: 40px; /* Increased margin between navigation items */
+    font-size: 28px; /* Increased font size */
+  }
+  
+  nav a:hover {
+    background-color: #555; /* Background color on hover */
+  }
+  
+  .blue-text {
+    color: rgb(131, 131, 221);
+  }
+  
+  .pink-text {
+    color: #ea82b8;
+  }
+  
+  /* Media queries for smaller screens */
+  @media screen and (max-width: 768px) {
+    header {
+      padding: 20px; /* Decreased padding */
+    }
+    
+    h1 {
+      font-size: 36px; /* Decreased font size */
+      margin-left: 20px; /* Adjusted margin */
+    }
+    
+    nav a {
+      margin-right: 30px; /* Decreased margin */
+      font-size: 24px; /* Decreased font size */
+    }
+  }
+  
