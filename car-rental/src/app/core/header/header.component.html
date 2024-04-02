@@ -7,7 +7,7 @@
     <a href="">Cars</a>
     <ng-container *ngIf="!isAuthenticated(); else loggedInLinks">
       <a routerLink="login">Login</a>
-      <a href="#">Register</a>
+      <a routerLink="register">Register</a>
     </ng-container>
     <ng-template #loggedInLinks>
       <a href="#" (click)="logout()">Logout</a>

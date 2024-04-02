@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
+import { MainRoutingModule } from './main-routing';
 
 
 
@@ -10,12 +12,14 @@ import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    MainRoutingModule
   ],
-  exports: [HomeComponent, LoginComponent]
+  exports: [HomeComponent, LoginComponent, RegisterComponent]
 })
 export class MainModule { }
