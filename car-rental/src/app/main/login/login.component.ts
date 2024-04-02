@@ -3,7 +3,6 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,7 +21,7 @@ export class LoginComponent {
         response => {
           console.log('Login response:', response);
           sessionStorage.setItem('userData', JSON.stringify(response));
-
+          this.apiService.updateAuthenticationStatus(); 
           this.router.navigate(['/home']);
         },
         error => {

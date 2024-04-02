@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor(private router: Router) { }
+
+  constructor(private router: Router, private apiService: ApiService) {}
 
   logout(): void {
-    
-    sessionStorage.removeItem('userData');
-    this.router.navigate(['/login']);
+    this.apiService.logout(); 
+    this.router.navigate(['/login']); 
+  }
+
+  isAuthenticated(): boolean {
+    return this.apiService.updateAuthenticationStatus(); 
   }
 }

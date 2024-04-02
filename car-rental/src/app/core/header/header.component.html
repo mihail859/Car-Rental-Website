@@ -5,8 +5,12 @@
     <a href="">About</a>
     <a href="">Services</a>
     <a href="">Cars</a>
-    <a routerLink="login">Login</a>
-    <a href="#">Register</a>
-    <a routerLink="login"(click)="logout()">Logout</a>
+    <ng-container *ngIf="!isAuthenticated(); else loggedInLinks">
+      <a routerLink="login">Login</a>
+      <a href="#">Register</a>
+    </ng-container>
+    <ng-template #loggedInLinks>
+      <a href="#" (click)="logout()">Logout</a>
+    </ng-template>
   </nav>
 </header>

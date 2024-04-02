@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { Observable } from 'rxjs';
 import { loginInterface } from 'src/interfaces';
 
@@ -16,5 +15,13 @@ export class ApiService {
     const url = `${this.apiUrl}/login`;
     const data = { email, password };
     return this.http.post<loginInterface>(url, data);
+  }
+
+  logout(): void {
+    sessionStorage.removeItem('userData'); // Remove user data from session storage
+  }
+
+  updateAuthenticationStatus(): boolean {
+    return !!sessionStorage.getItem('userData'); // Check if user is authenticated
   }
 }
