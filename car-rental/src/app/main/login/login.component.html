@@ -1,18 +1,19 @@
-
 <div class="container">
     <div class="form-container" id="login-form">
       <h1>Login</h1>
-      <form>
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
         <label for="username">Username</label>
-        <input type="text" id="username" name="username" required>
+        <input type="text" id="username" name="username" required ngModel>
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" required ngModel>
         <button type="submit">Login</button>
       </form>
       <p>Don't have an account? <a href="#" id="signup-link">Sign up</a></p>
     </div>
+  </div>
+  
 
-    <div class="form-container" id="signup-form" style="display: none;">
+    <!-- <div class="form-container" id="signup-form" style="display: none;">
       <h1>Sign Up</h1>
       <form>
         <label for="new-username">Username</label>
@@ -23,6 +24,4 @@
         <input type="password" id="new-password" name="new-password" required>
         <button type="submit">Sign Up</button>
       </form>
-      <p>Already have an account? <a href="#" id="login-link">Login</a></p>
-    </div>
-  </div>
+      <p>Already have an account? <a href="#" id="login-link">Login</a></p> -->
