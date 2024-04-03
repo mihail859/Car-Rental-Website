@@ -1,57 +1,66 @@
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   header {
-    padding: 20px; 
+    flex-direction: column;
+    text-align: center;
   }
-  
+
   h1 {
-    font-size: 36px; 
-    margin-left: 20px; 
+    font-size: 36px;
+    margin-bottom: 10px;
   }
-  
+
+  nav {
+    margin-top: 10px;
+  }
+
   nav a {
-    margin-right: 30px;
-    font-size: 24px; 
+    margin-right: 0;
+    margin-bottom: 10px; 
+    font-size: 20px;
   }
+}
+
+header {
+  background-color: hsl(0, 20%, 73%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  margin-right: 80px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px; 
+  font-size: 24px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+nav a:last-child {
+  margin-right: 0; 
+}
+
+.blue-text {
+  color: rgb(131, 131, 221);
+}
+
+.pink-text {
+  color: #ea82b8;
 }
 
 
 
-header {
-    background-color: hsl(0, 20%, 73%); 
-    color: white; 
-    padding: 20px; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-  }
-  
-  h1 {
-    font-size: 48px; 
-    margin: 0; 
-  }
-  
-  nav {
-    display: flex; 
-  }
-  
-  nav a {
-    color: white; 
-    text-decoration: none; 
-    margin-right: 40px; 
-    font-size: 28px;
-  }
-  
-  nav a:hover {
-    background-color: #555; 
-  }
-  
-  .blue-text {
-    color: rgb(131, 131, 221);
-  }
-  
-  .pink-text {
-    color: #ea82b8;
-  }
-  
-  
-  

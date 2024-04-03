@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { MainRoutingModule } from './main-routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CarDetailsComponent } from './car-details/car-details.component';
 
 
 
@@ -15,13 +16,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
+    CarDetailsComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     MainRoutingModule
   ],
-  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent]
+  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent, CarDetailsComponent]
 })
 export class MainModule { }
