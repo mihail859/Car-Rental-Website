@@ -1,4 +1,14 @@
-<p (click)="getData()">dashboard works!</p>
-<div class="container" >
-
-</div>
+<h3 class="heading">Cars</h3>
+<section id="dashboard">
+    <div class="item" *ngFor="let car of cars">
+      <img src="assets/images/{{ car.details.image }}" alt="{{ car.brand }} {{ car.model }}" />
+      <h3 class="model">{{ car.brand }} {{ car.model }}</h3>
+      <div class="item-info">
+        <p class="price">Price: {{ car.price | currency:'EUR' }}</p>
+        <p class="availability">Availability: {{ car.details.condition }}</p>
+        <p class="type">Transmission: {{ car.transmission }}</p>
+      </div>
+      <a class="details-btn" href="#">Details</a>
+    </div>
+  </section>
+  

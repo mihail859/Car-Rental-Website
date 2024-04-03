@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
 import { carInterface } from 'src/interfaces';
 
@@ -7,14 +7,18 @@ import { carInterface } from 'src/interfaces';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
   cars: carInterface[] = [];
   constructor( private apiService: ApiService) {}
 
+  ngOnInit(): void {
+    this.getData();
+  }
 
   getData(){
     this.apiService.getAllCars().subscribe(cars => {
-      console.log(cars)
+      this.cars = Object.values(cars);
+      console.log(this.cars)
     })
   }
 }
