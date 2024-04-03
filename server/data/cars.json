@@ -1,0 +1,93 @@
+[
+    {
+      "id": 0,
+      "brand": "Toyota",
+      "model": "Camry",
+      "year": 2020,
+      "color": "Silver",
+      "price": 25000,
+      "transmission": "Automatic",
+      "seats": 5,
+      "details": {
+        "engine": "2.5L Inline-4",
+        "fuelType": "Gasoline",
+        "mileage": 30000,
+        "condition": "Used",
+        "description": "Well-maintained, low mileage sedan.",
+        "image": "toyota_camry.jpg"
+      }
+    },
+    {
+      "id": 1,
+      "brand": "Honda",
+      "model": "Accord",
+      "year": 2019,
+      "color": "Black",
+      "price": 23000,
+      "transmission": "Automatic",
+      "seats": 5,
+      "details": {
+        "engine": "1.5L Turbocharged Inline-4",
+        "fuelType": "Gasoline",
+        "mileage": 25000,
+        "condition": "Used",
+        "description": "Sporty sedan with excellent fuel efficiency.",
+        "image": "honda_accord.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "brand": "Ford",
+      "model": "Mustang",
+      "year": 2018,
+      "color": "Red",
+      "price": 35000,
+      "transmission": "Manual",
+      "seats": 4,
+      "details": {
+        "engine": "5.0L V8",
+        "fuelType": "Gasoline",
+        "mileage": 20000,
+        "condition": "Used",
+        "description": "Iconic American muscle car.",
+        "image": "ford_mustang.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "brand": "Chevrolet",
+      "model": "Camaro",
+      "year": 2019,
+      "color": "Yellow",
+      "price": 32000,
+      "transmission": "Manual",
+      "seats": 4,
+      "details": {
+        "engine": "6.2L V8",
+        "fuelType": "Gasoline",
+        "mileage": 18000,
+        "condition": "Used",
+        "description": "Legendary performance car with a classic design.",
+        "image": "chevrolet_camaro.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "White",
+      "price": 50000,
+      "transmission": "Automatic",
+      "seats": 5,
+      "details": {
+        "engine": "3.0L Inline-6",
+        "fuelType": "Gasoline",
+        "mileage": 10000,
+        "condition": "New",
+        "description": "Luxurious SUV with advanced features.",
+        "image": "bmw_x5.jpg"
+      }
+    }
+  ]
+  
