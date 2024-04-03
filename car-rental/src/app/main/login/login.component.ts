@@ -21,6 +21,12 @@ export class LoginComponent {
         response => {
           console.log('Login response:', response);
           sessionStorage.setItem('userData', JSON.stringify(response));
+
+
+          if (email === 'admin@abv.bg' && password === 'admin') {
+            sessionStorage.setItem('isAdminLoggedIn', 'true');
+          }
+          
           this.apiService.updateAuthenticationStatus(); 
           this.router.navigate(['/home']);
         },

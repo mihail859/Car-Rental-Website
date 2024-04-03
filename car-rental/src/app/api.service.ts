@@ -20,6 +20,9 @@ export class ApiService {
 
   logout(): void {
     sessionStorage.removeItem('userData'); 
+    if (sessionStorage.getItem('isAdminLoggedIn')){
+      sessionStorage.removeItem('isAdminLoggedIn')
+    }
   }
 
   updateAuthenticationStatus(): boolean {
