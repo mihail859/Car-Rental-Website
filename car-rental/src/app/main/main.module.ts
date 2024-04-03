@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { MainRoutingModule } from './main-routing';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -13,13 +14,14 @@ import { MainRoutingModule } from './main-routing';
   declarations: [
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     MainRoutingModule
   ],
-  exports: [HomeComponent, LoginComponent, RegisterComponent]
+  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent]
 })
 export class MainModule { }

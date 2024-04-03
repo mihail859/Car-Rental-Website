@@ -1,4 +1,14 @@
-.wrraper{
-  /* background-color: rgb(98, 52, 69); */
+.wrraper {
+  /* Set the background image */
   background-image: url("../assets/images/pexels-k-howard-2220292.jpg");
+
+  /* Make the background image cover the entire container */
+  background-size: cover;
+
+  /* Center the background image vertically and horizontally */
+  background-position: center;
+
+  /* Specify additional styles */
+  /* For example, set a minimum height to ensure the container expands if content is small */
+  min-height: 100vh; /* Adjust this value as needed */
 }

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { CoreRoutingModule } from './core-routing.module';
+import { MainModule } from '../main/main.module';
 
 
 
@@ -13,7 +14,8 @@ import { CoreRoutingModule } from './core-routing.module';
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    MainModule
   ],
   exports: [HeaderComponent, FooterComponent]
 })

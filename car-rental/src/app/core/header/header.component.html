@@ -3,7 +3,7 @@
   <nav>
     <a routerLink="home">Home</a>
     <a href="">Services</a>
-    <a href="">Cars</a>
+    <a routerLink="dashboard">Cars</a>
     <ng-container *ngIf="!isAuthenticated(); else loggedInLinks">
       <a routerLink="login">Login</a>
       <a routerLink="register">Register</a>
