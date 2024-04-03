@@ -38,4 +38,8 @@ export class ApiService {
   getAllCars(){
      return this.http.get<carInterface>(`${this.jsonStoreUrl}/cars`)
   }
+
+  getCarById(id: number){
+    return this.http.get<carInterface>(`${this.jsonStoreUrl}/cars/${id}`)
+  }
 }

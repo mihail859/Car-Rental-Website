@@ -1,1 +1,30 @@
-<p>car-details works!</p>
+
+<h3 *ngIf="car$ | async as car" class="heading">{{car.brand}} {{car.model}}</h3>
+
+<section id="details" *ngIf="car$ | async as car">
+    <div class="wrap">
+        <div class="information">
+            <h3>Year: <span>{{car.year}}</span></h3>
+            <h3>Color: <span>{{car.color}}</span></h3>
+            <h3>Price: <span>{{car.price}}</span></h3>
+            <h3>Transmission: <span>{{car.transmission}}</span></h3>
+            <h3>Seats: <span>{{car.seats}}</span></h3>
+            <h3>Engine: <span>{{car.details.engine}}</span></h3>
+            <h3>fuelType: <span>{{car.details.fuelType}}</span></h3>
+            <h3>Mileage: <span>{{car.details.fuelType}}</span></h3>
+            <h3>Condition: <span>{{car.details.condition}}</span></h3>
+            <h3>Description</h3>
+            <p>{{car.details.description}}</p>
+        </div>
+        <div class="btns">
+            <a class="details-btn">Rent</a>
+            <a class="details-btn" routerLink="/dashboard">Back</a>
+        </div>
+
+    </div>
+
+    <div class="imageContainer">
+        <img src="../../../assets/images/{{car.details.image}}">
+    </div>
+
+</section>
