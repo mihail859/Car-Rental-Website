@@ -1,7 +1,7 @@
 <div class="container">
   <div class="form-container" id="login-form">
     <h1>Register</h1>
-    <form #loginForm="ngForm">
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
       <label for="username">Username</label>
       <input type="text" id="username" name="username" required ngModel>
       <label for="password">Password</label>

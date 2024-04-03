@@ -13,15 +13,21 @@ export class ApiService {
 
   loginFunction(email: string, password: string): Observable<any>{
     const url = `${this.apiUrl}/login`;
-    const data = { email, password };
+    const data = JSON.stringify({ email, password });
     return this.http.post<loginInterface>(url, data);
   }
 
   logout(): void {
-    sessionStorage.removeItem('userData'); // Remove user data from session storage
+    sessionStorage.removeItem('userData'); 
   }
 
   updateAuthenticationStatus(): boolean {
-    return !!sessionStorage.getItem('userData'); // Check if user is authenticated
+    return !!sessionStorage.getItem('userData'); 
+  }
+
+  registerUser(email: string, password: string): Observable<any>{
+    const url = `${this.apiUrl}/register`;
+    const data = JSON.stringify({ email, password });
+    return this.http.post(url, data);
   }
 }
