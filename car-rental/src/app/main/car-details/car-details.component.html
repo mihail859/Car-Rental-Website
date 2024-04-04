@@ -17,7 +17,10 @@
             <p>{{car.details.description}}</p>
         </div>
         <div class="btns">
-            <a class="details-btn">Rent</a>
+            <a class="details-btn" *ngIf="isUserLoggedIn(); else notLoggedIn">Rent</a>
+            <ng-template #notLoggedIn>
+                <a class="details-btn" routerLink="/login">Login to Rent</a>
+            </ng-template>
             <a class="details-btn" routerLink="/dashboard">Back</a>
         </div>
 

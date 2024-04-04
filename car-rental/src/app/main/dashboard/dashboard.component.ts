@@ -9,7 +9,7 @@ import { carInterface } from 'src/interfaces';
 })
 export class DashboardComponent implements OnInit {
   cars: carInterface[] = [];
-  constructor( private apiService: ApiService) {}
+  constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
     this.getData();
@@ -20,5 +20,12 @@ export class DashboardComponent implements OnInit {
       this.cars = Object.values(cars);
       console.log(this.cars)
     })
+  }
+
+  calculateWidth() {
+    const screenWidth = window.innerWidth;
+    const maxCarsPerRow = 5  ;
+    const itemWidthPercentage = 100 / maxCarsPerRow;
+    return `calc(${itemWidthPercentage}% - 25px)`; 
   }
 }

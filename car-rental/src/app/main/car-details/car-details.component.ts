@@ -21,4 +21,8 @@ export class CarDetailsComponent implements OnInit {
       this.car$ = this.apiService.getCarById(carId); // Assign the Observable to car$
     });
   }
+
+  isUserLoggedIn(): boolean {
+    return this.apiService.updateAuthenticationStatus();
+  }
 }

@@ -88,6 +88,96 @@
         "description": "Luxurious SUV with advanced features.",
         "image": "bmw_x5.jpg"
       }
+    },
+    {
+      "id": 5,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "White",
+      "price": 50000,
+      "transmission": "Automatic",
+      "seats": 5,
+      "details": {
+        "engine": "3.0L Inline-6",
+        "fuelType": "Gasoline",
+        "mileage": 10000,
+        "condition": "New",
+        "description": "Luxurious SUV with advanced features.",
+        "image": "bmw_x5.jpg"
+      }
+    },
+    {
+      "id": 6,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "White",
+      "price": 50000,
+      "transmission": "Automatic",
+      "seats": 5,
+      "details": {
+        "engine": "3.0L Inline-6",
+        "fuelType": "Gasoline",
+        "mileage": 10000,
+        "condition": "New",
+        "description": "Luxurious SUV with advanced features.",
+        "image": "bmw_x5.jpg"
+      }
+    },
+    {
+      "id": 7,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "White",
+      "price": 50000,
+      "transmission": "Automatic",
+      "seats": 5,
+      "details": {
+        "engine": "3.0L Inline-6",
+        "fuelType": "Gasoline",
+        "mileage": 10000,
+        "condition": "New",
+        "description": "Luxurious SUV with advanced features.",
+        "image": "bmw_x5.jpg"
+      }
+    },
+    {
+      "id": 8,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "White",
+      "price": 50000,
+      "transmission": "Automatic",
+      "seats": 5,
+      "details": {
+        "engine": "3.0L Inline-6",
+        "fuelType": "Gasoline",
+        "mileage": 10000,
+        "condition": "New",
+        "description": "Luxurious SUV with advanced features.",
+        "image": "bmw_x5.jpg"
+      }
+    },
+    {
+      "id": 9,
+      "brand": "BMW",
+      "model": "X5",
+      "year": 2021,
+      "color": "White",
+      "price": 50000,
+      "transmission": "Automatic",
+      "seats": 5,
+      "details": {
+        "engine": "3.0L Inline-6",
+        "fuelType": "Gasoline",
+        "mileage": 10000,
+        "condition": "New",
+        "description": "Luxurious SUV with advanced features.",
+        "image": "bmw_x5.jpg"
+      }
     }
   ]
   
