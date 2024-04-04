@@ -1,6 +1,6 @@
 <header>
   <h1><span class="blue-text">Car</span> <span class="pink-text">Rental</span></h1>
-  <nav>
+  <nav *ngIf="!isAdminHere()">
     <a routerLink="home">Home</a>
     <a href="">Services</a>
     <a routerLink="dashboard">Cars</a>
@@ -10,6 +10,19 @@
     </ng-container>
     <ng-template #loggedInLinks>
       <a href="">Purchase</a>
+      <a routerLink="" (click)="logout()">Logout</a>
+    </ng-template>
+  </nav>
+
+  <nav *ngIf="isAdminHere()">
+    <a routerLink="home">Create</a>
+    <a href="">Requests</a>
+    <a routerLink="dashboard">Cars</a>
+    <ng-container *ngIf="!isAuthenticated(); else loggedInLinks">
+      <a routerLink="login">Login</a>
+      <a routerLink="register">Register</a>
+    </ng-container>
+    <ng-template #loggedInLinks>
       <a routerLink="" (click)="logout()">Logout</a>
     </ng-template>
   </nav>

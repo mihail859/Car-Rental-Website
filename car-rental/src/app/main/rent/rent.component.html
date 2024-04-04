@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="form-container" id="login-form">
+        <h1>Rent</h1>
+        <form #rentForm="ngForm" (ngSubmit)="rentACar(rentForm)">
+            <div class="form-group">
+                <label for="username">First Name:</label>
+                <input type="text" id="username" name="username" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="license">License Plate:</label>
+                <input type="text" id="license" name="license" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="from">From:</label>
+                <input type="date" id="from" name="from" required ngModel>
+            </div>
+            <div class="form-group">
+                <label for="to">To:</label>
+                <input type="date" id="to" name="to" required ngModel>
+            </div>
+            <button type="submit">Rent</button>
+            
+        </form>
+        <p><a routerLink="/dashboard" id="link">Go Back</a></p>
+    </div>
+</div>

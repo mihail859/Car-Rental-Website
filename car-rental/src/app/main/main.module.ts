@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { MainRoutingModule } from './main-routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarDetailsComponent } from './car-details/car-details.component';
+import { RentComponent } from './rent/rent.component';
 
 
 
@@ -17,13 +18,14 @@ import { CarDetailsComponent } from './car-details/car-details.component';
     LoginComponent,
     RegisterComponent,
     DashboardComponent,
-    CarDetailsComponent
+    CarDetailsComponent,
+    RentComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     MainRoutingModule
   ],
-  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent, CarDetailsComponent]
+  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent, CarDetailsComponent, RentComponent]
 })
 export class MainModule { }

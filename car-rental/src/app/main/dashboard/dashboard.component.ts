@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
 
   getData(){
     this.apiService.getAllCars().subscribe(cars => {
-      this.cars = Object.values(cars);
+      this.cars = Object.values(cars).filter(c => c.isRented.user === "none");
       console.log(this.cars)
     })
   }

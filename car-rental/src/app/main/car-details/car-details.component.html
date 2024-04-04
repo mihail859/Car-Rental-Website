@@ -6,7 +6,7 @@
         <div class="information">
             <h3>Year: <span>{{car.year}}</span></h3>
             <h3>Color: <span>{{car.color}}</span></h3>
-            <h3>Price: <span>{{car.price}}</span></h3>
+            <h3>Price: <span>{{car.price | currency: 'EUR'}}</span></h3>
             <h3>Transmission: <span>{{car.transmission}}</span></h3>
             <h3>Seats: <span>{{car.seats}}</span></h3>
             <h3>Engine: <span>{{car.details.engine}}</span></h3>
@@ -17,7 +17,7 @@
             <p>{{car.details.description}}</p>
         </div>
         <div class="btns">
-            <a class="details-btn" *ngIf="isUserLoggedIn(); else notLoggedIn">Rent</a>
+            <a class="details-btn" *ngIf="isUserLoggedIn(); else notLoggedIn" [routerLink]="['/rent', car.id]">Rent</a>
             <ng-template #notLoggedIn>
                 <a class="details-btn" routerLink="/login">Login to Rent</a>
             </ng-template>

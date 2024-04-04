@@ -19,4 +19,8 @@ export class HeaderComponent {
   isAuthenticated(): boolean {
     return this.apiService.updateAuthenticationStatus(); 
   }
+
+  isAdminHere(): boolean {
+    return this.apiService.isAdmin(); 
+  }
 }

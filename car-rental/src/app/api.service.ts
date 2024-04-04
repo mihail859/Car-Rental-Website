@@ -42,4 +42,32 @@ export class ApiService {
   getCarById(id: number){
     return this.http.get<carInterface>(`${this.jsonStoreUrl}/cars/${id}`)
   }
+
+  isAdmin(): boolean{
+    if (sessionStorage.getItem("isAdminLoggedIn") === "true"){
+      return true
+    }else{
+      return false
+    }
+  }
+
+  patchCar(id: number, data: any): Observable<any>{
+    return this.http.patch(`${this.jsonStoreUrl}cars/${id}`, data)
+  }
+
+  getDataUser() {
+    const userDataString = sessionStorage.getItem("userData")
+    if (userDataString) {
+      try {
+        const userData = JSON.parse(userDataString); 
+        return userData; 
+      } catch (error) {
+        console.error('Error parsing user data:', error);
+        return null; 
+      }
+    } else {
+      return null; 
+    }
+  }
+  
 }

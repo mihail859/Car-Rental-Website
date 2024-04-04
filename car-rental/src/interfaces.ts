@@ -19,6 +19,10 @@ export interface carInterface{
         "transmission": string;
         "seats": number,
         "details": Details;   
+        "isRented": {
+            "user": string | User;
+            "period": string;
+        }
 }
 
 interface Details{
@@ -28,4 +32,10 @@ interface Details{
     "condition": string;
     "description": string;
     "image": string;
+}
+
+interface User{
+    id: string;
+    email: string;
+    license: string;
 }

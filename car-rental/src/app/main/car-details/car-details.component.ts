@@ -12,13 +12,13 @@ import { Observable } from 'rxjs';
 export class CarDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute, private apiService: ApiService) {}
 
-  car$!: Observable<carInterface>; // Define car$ as an Observable
+  car$!: Observable<carInterface>; 
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       const carId = params['id'];
       console.log('Car ID:', carId);
-      this.car$ = this.apiService.getCarById(carId); // Assign the Observable to car$
+      this.car$ = this.apiService.getCarById(carId); 
     });
   }
 

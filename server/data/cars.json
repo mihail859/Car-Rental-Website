@@ -15,6 +15,10 @@
         "condition": "Used",
         "description": "Well-maintained, low mileage sedan.",
         "image": "toyota_camry.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
     },
     {
@@ -22,7 +26,7 @@
       "brand": "Honda",
       "model": "Accord",
       "year": 2019,
-      "color": "Black",
+      "color": "Gray",
       "price": 230,
       "transmission": "Automatic",
       "seats": 5,
@@ -33,6 +37,10 @@
         "condition": "Used",
         "description": "Sporty sedan with excellent fuel efficiency.",
         "image": "honda_accord.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
     },
     {
@@ -51,6 +59,10 @@
         "condition": "Used",
         "description": "Iconic American muscle car.",
         "image": "ford_mustang.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
     },
     {
@@ -69,6 +81,10 @@
         "condition": "Used",
         "description": "Legendary performance car with a classic design.",
         "image": "chevrolet_camaro.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
     },
     {
@@ -87,6 +103,10 @@
         "condition": "New",
         "description": "Luxurious SUV with advanced features.",
         "image": "bmw_x5.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
     },
     {
@@ -105,6 +125,10 @@
         "condition": "Used",
         "description": "Luxury sedan with a sleek design.",
         "image": "audi_a4.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
     },
     {
@@ -123,6 +147,10 @@
         "condition": "Used",
         "description": "Compact hatchback known for its performance.",
         "image": "volkswagen_golf_gti.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
     },
     {
@@ -141,6 +169,10 @@
           "condition": "Used",
           "description": "Reliable midsize sedan with spacious interior.",
           "image": "nissan_altima.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
     },
     {
@@ -159,6 +191,10 @@
           "condition": "Used",
           "description": "Luxury sedan known for its comfort and performance.",
           "image": "mercedes_c_class.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
   },
   {
@@ -177,6 +213,10 @@
           "condition": "Used",
           "description": "Fully electric sedan with impressive acceleration.",
           "image": "tesla_model_3.jpg"
+      },
+      "isRented": {
+        "user": "none",
+        "period": "none"
       }
   }
     
