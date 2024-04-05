@@ -9,10 +9,10 @@ import { MainModule } from './main/main.module';
 import { FormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
     AppComponent
-
   ],
   imports: [
     BrowserModule,

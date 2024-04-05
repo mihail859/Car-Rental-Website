@@ -2,6 +2,7 @@
 <section id="dashboard">
   <div class="car-wrapper">
     <div class="item" *ngFor="let car of cars; let i = index" [ngStyle]="{'flex-basis': calculateWidth()}">
+      <app-loading *ngIf="loading"></app-loading> 
       <img src="../../../assets/images/{{ car.details.image }}" alt="{{ car.brand }} {{ car.model }}" />
       <h3 class="model">{{ car.brand }} {{ car.model }}</h3>
       <div class="item-info">

@@ -8,6 +8,8 @@ import { MainRoutingModule } from './main-routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CarDetailsComponent } from './car-details/car-details.component';
 import { RentComponent } from './rent/rent.component';
+import { LoadingComponent } from './loading/loading.component';
+
 
 
 
@@ -19,7 +21,8 @@ import { RentComponent } from './rent/rent.component';
     RegisterComponent,
     DashboardComponent,
     CarDetailsComponent,
-    RentComponent
+    RentComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
