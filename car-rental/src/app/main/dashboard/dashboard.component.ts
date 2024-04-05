@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
-import { carInterface } from 'src/interfaces';
+import { User, carInterface } from 'src/interfaces';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,29 +11,63 @@ import { carInterface } from 'src/interfaces';
 export class DashboardComponent implements OnInit {
   cars: carInterface[] = [];
   loading: boolean = false; 
+  isAdmin: boolean = false;
+  carArr!: carInterface[];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit(): void {
     
-    this.getData();
+    this.getData(); 
+    setInterval(() => {
+      this.getData(); 
+    }, 5 * 60 * 1000);
   }
 
   getData(){
     this.loading = true; 
     this.apiService.getAllCars().subscribe(cars => {
-      this.cars = Object.values(cars).filter(c => c.isRented.user === "none");
+      // this.cars = Object.values(cars).filter(c => c.isRented.user === "none");
+      this.cars = Object.values(cars)
       console.log(this.cars);
       setTimeout(() => {
         this.loading = false; 
       }, 500);
     });
   }
+  isUser(user: string | User): user is User {
+    return typeof user !== 'string';
+  }
+  
 
   calculateWidth() {
     const screenWidth = window.innerWidth;
     const maxCarsPerRow = 5;
     const itemWidthPercentage = 100 / maxCarsPerRow;
     return `calc(${itemWidthPercentage}% - 25px)`; 
+  }
+  isAdminHere(){
+    return this.apiService.isAdmin();
+  }
+  unrent(carId: number){
+    console.log("From unrenting...", carId);
+    const updatedCar = {
+      "isRented": {
+        "user": "none",
+        "period": `none`
+      }
+    }; 
+    this.apiService.patchCar(carId, updatedCar).subscribe(
+      response => {
+        console.log('Patch successful:', response);
+        this.router.navigate([`dashboard`]);
+        this.getData();
+      },
+      error => {
+        console.error('Patch error:', error);
+        
+      }
+    )
+
   }
 }

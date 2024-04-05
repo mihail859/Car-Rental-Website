@@ -34,7 +34,7 @@ interface Details{
     "image": string;
 }
 
-interface User{
+export interface User{
     id: string;
     email: string;
     license: string;

@@ -2,9 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start; /* Align items at the start of the flex container */
   gap: 10px;
   margin: 10px 40px;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
   padding-top: 3em;
 }
 
@@ -19,6 +20,10 @@
 
 .item:hover {
   transform: translateY(-10px);
+}
+
+#dashboard {
+  padding-bottom: 3em;
 }
 
 .item img {
@@ -44,6 +49,7 @@
   font-size: 16px;
   color: #666;
 }
+
 .heading {
   color: rgb(5, 171, 232);
   text-shadow: 3px 3px rgb(238, 0, 143);
@@ -68,8 +74,36 @@
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  width: 150px; 
+  height: 40px; 
+}
+.unrent-btn {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #f58ccb;
+  color: #080808;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 150px; 
+  height: 40px; 
+  font-weight: bold;
 }
 
-.details-btn:hover {
-  background-color: #041189;
+.unrent-btn:hover {
+  background-color: #6471de;
+}
+
+.rented {
+  color: red; 
+  font-weight: bold; 
+  font-size: 18x;
+}
+
+.red-cross {
+  color: red; 
+  font-size: 24px; 
+  margin-left: 5px; 
 }

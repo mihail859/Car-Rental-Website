@@ -1,16 +1,28 @@
-<h3 class="heading">Cars</h3>
+<h3 class="heading">Cars For Rent</h3>
 <section id="dashboard">
   <div class="car-wrapper">
     <div class="item" *ngFor="let car of cars; let i = index" [ngStyle]="{'flex-basis': calculateWidth()}">
       <app-loading *ngIf="loading"></app-loading> 
       <img src="../../../assets/images/{{ car.details.image }}" alt="{{ car.brand }} {{ car.model }}" />
       <h3 class="model">{{ car.brand }} {{ car.model }}</h3>
-      <div class="item-info">
+      <div class="item-info" *ngIf="!isAdminHere()">
         <p class="price">Price: {{ car.price | currency:'EUR' }}</p>
         <p class="availability">Availability: {{ car.details.condition }}</p>
         <p class="type">Transmission: {{ car.transmission }}</p>
+        <p *ngIf="car.isRented.user !== 'none'" class="rented">Rented {{car.isRented.period}}<span class="red-cross">✘</span></p>
+
       </div>
-      <a class="details-btn" [routerLink]="['/details', car.id]">Details</a>
+      <div class="item-info" *ngIf="isAdminHere() && car.isRented.user !== 'none'">
+        <p class="price">Email: {{ isUser(car.isRented.user) ? car.isRented.user.email : car.isRented.user }}</p>
+
+        <p *ngIf="car.isRented.user !== 'none'" class="rented">{{car.isRented.period}}<span class="red-cross">✘</span></p>
+
+      </div>
+
+      <a class="details-btn" [routerLink]="['/details', car.id]" *ngIf="car.isRented.user === 'none' && !isAdminHere()" >Details</a>
+      <a class="unrent-btn"  *ngIf="isAdminHere() && car.isRented.user !== 'none'" (click)="unrent(car.id)">Unrent</a>
+      <a class="details-btn" [routerLink]="['/edit', car.id]" *ngIf="isAdminHere() && car.isRented.user === 'none'" >Edit</a>
+      
     </div>
   </div>
 </section>
