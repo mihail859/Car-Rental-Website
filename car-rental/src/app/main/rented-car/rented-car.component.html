@@ -1,0 +1,12 @@
+<h3 class="heading">Your rented Car</h3>
+<section class="rented" *ngFor="let c of car">
+    <div class="img">
+        <img src="../../../assets/images/{{c.details.image}}" alt="" srcset="">
+    </div>
+    <div class="information">
+        <h2>{{c.brand}} {{c.model}}</h2>
+        <h3> Rented:  <span>{{c.isRented.period}}</span></h3>
+        <h3>Total Price: {{ totalPrice | currency:'EUR' }}</h3>
+
+    </div>
+</section>

@@ -1,7 +1,7 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from 'src/app/api.service';
 import { carInterface } from 'src/interfaces';
@@ -15,7 +15,7 @@ export class RentComponent implements OnInit{
   carInfo!: carInterface;
   idOfTheCar!: number;
 
-   constructor(private routes: ActivatedRoute, private apiService: ApiService){}
+   constructor(private routes: ActivatedRoute, private apiService: ApiService, private router: Router){}
 
    ngOnInit(): void {
      this.routes.params.subscribe(params => {
@@ -60,6 +60,7 @@ export class RentComponent implements OnInit{
       this.apiService.patchCar(this.carInfo?.id, updatedCar).subscribe(
         response => {
           console.log('Patch successful:', response);
+          this.router.navigate([`/rented/${this.carInfo?.id}`]);
         },
         error => {
           console.error('Patch error:', error);

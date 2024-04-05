@@ -9,21 +9,22 @@ import { carInterface } from 'src/interfaces';
 })
 export class DashboardComponent implements OnInit {
   cars: carInterface[] = [];
-  loading: boolean = false; // New property to control loading indicator
+  loading: boolean = false; 
 
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
+    
     this.getData();
   }
 
   getData(){
-    this.loading = true; // Show loading indicator
+    this.loading = true; 
     this.apiService.getAllCars().subscribe(cars => {
       this.cars = Object.values(cars).filter(c => c.isRented.user === "none");
       console.log(this.cars);
       setTimeout(() => {
-        this.loading = false; // Hide loading indicator after 2 seconds
+        this.loading = false; 
       }, 500);
     });
   }

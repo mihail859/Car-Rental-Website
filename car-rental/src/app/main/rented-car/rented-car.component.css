@@ -1,0 +1,60 @@
+.heading {
+    color: rgb(5, 171, 232);
+    text-shadow: 3px 3px rgb(238, 0, 143);
+    width: 30vw;
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 8px;
+    background-color: rgba(255, 255, 255, 0.866);
+    clip-path: polygon(7% 0, 100% 0, 100% 20%, 100% 59%, 93% 100%, 20% 100%, 0 100%, 0 43%);
+    margin-left: 33vw;
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+
+.rented {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 850px; 
+    margin: 0 auto; 
+    gap: 80px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+}
+.information{
+    padding-right: 50px;
+}
+
+.rented:hover {
+    transform: scale(1.05); /* Enlarge on hover */
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.rented .img {
+    margin-right: 25px;
+}
+
+.rented .img img {
+    max-width: 300px; 
+    height: auto;
+    border-radius: 6px;
+}
+
+.rented .information h2 {
+    margin: 0;
+    font-size: 24px; 
+}
+
+.rented .information h3 {
+    margin: 10px 0 0; 
+    font-size: 20px; 
+}
+
+.rented .information h3 span {
+    font-weight: bold;
+    color: #6c0746; 
+}
