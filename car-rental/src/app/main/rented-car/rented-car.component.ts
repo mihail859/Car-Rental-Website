@@ -10,6 +10,7 @@ import { carInterface } from 'src/interfaces';
 export class RentedCarComponent implements OnInit {
   car: carInterface[] = [];
   totalPrice: number = 0;
+  isCars: boolean = true;
   
   constructor(private apiService: ApiService) {}
 
@@ -26,7 +27,7 @@ export class RentedCarComponent implements OnInit {
         car.isRented && car.isRented.user && car.isRented.user.id === id
       );
       if (this.car.length === 0) {
-        window.alert("No cars rented by this user");
+        this.isCars = false;
       } else {
         this.calculateTotalPrice();
       }

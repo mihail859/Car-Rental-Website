@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="form-container" id="login-form">
+      <h1>Search</h1>
+      <form #searchForm="ngForm" (ngSubmit)="search(searchForm)">
+        <label for="brand">Brand</label>
+        <input type="text" id="brand" name="brand" required ngModel>
+
+        <label for="model">Model</label>
+        <input type="text" id="model" name="model" required ngModel>
+
+        <button type="submit">Search</button>
+      </form>
+      <p>Go to dashboard <a routerLink="/dashboard" id="signup-link">Dashboard</a></p>
+    </div>
+</div>

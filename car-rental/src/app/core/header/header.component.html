@@ -3,6 +3,7 @@
   <nav *ngIf="!isAdminHere()">
     <a routerLink="home">Home</a>
     <a routerLink="dashboard">Cars</a>
+    <a routerLink="search">Search</a>
     <ng-container *ngIf="!isAuthenticated(); else loggedInLinks">
       <a routerLink="login">Login</a>
       <a routerLink="register">Register</a>
@@ -15,8 +16,8 @@
 
   <nav *ngIf="isAdminHere()">
     <a routerLink="home">Create</a>
-    <a href="">Requests</a>
     <a routerLink="dashboard">Cars</a>
+    <a routerLink="search">Search</a>
     <ng-container *ngIf="!isAuthenticated(); else loggedInLinks">
       <a routerLink="login">Login</a>
       <a routerLink="register">Register</a>

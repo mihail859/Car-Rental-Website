@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { User, carInterface } from 'src/interfaces';
 
@@ -14,27 +14,38 @@ export class DashboardComponent implements OnInit {
   isAdmin: boolean = false;
   carArr!: carInterface[];
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiService, private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    
-    this.getData(); 
+    this.route.queryParams.subscribe(params => {
+      const brand = params['brand'];
+      const model = params['model'];
+      if (brand && model) {
+        this.getData(brand, model);
+      } else {
+        this.getData();
+      }
+    });
     setInterval(() => {
       this.getData(); 
     }, 5 * 60 * 1000);
   }
 
-  getData(){
+  getData(brand?: string, model?: string){
     this.loading = true; 
     this.apiService.getAllCars().subscribe(cars => {
-      // this.cars = Object.values(cars).filter(c => c.isRented.user === "none");
-      this.cars = Object.values(cars)
+      if (brand && model) {
+        this.cars = Object.values(cars).filter(car => car.brand === brand && car.model === model);
+      } else {
+        this.cars = Object.values(cars);
+      }
       console.log(this.cars);
       setTimeout(() => {
         this.loading = false; 
       }, 500);
     });
   }
+
   isUser(user: string | User): user is User {
     return typeof user !== 'string';
   }

@@ -28,6 +28,16 @@
 .information{
     padding-right: 50px;
 }
+.no-avaliable{
+    background-color: transparent;
+    font-size: 95px;
+    text-shadow: 4px 4px rgb(95, 42, 42);
+    font-weight: 900;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(186, 5, 186);
+  
+  }
 
 .rented:hover {
     transform: scale(1.05); /* Enlarge on hover */

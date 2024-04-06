@@ -10,6 +10,7 @@ import { CarDetailsComponent } from './car-details/car-details.component';
 import { RentComponent } from './rent/rent.component';
 import { LoadingComponent } from './loading/loading.component';
 import { RentedCarComponent } from './rented-car/rented-car.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -24,13 +25,14 @@ import { RentedCarComponent } from './rented-car/rented-car.component';
     CarDetailsComponent,
     RentComponent,
     LoadingComponent,
-    RentedCarComponent
+    RentedCarComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     MainRoutingModule
   ],
-  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent, CarDetailsComponent, RentComponent, RentedCarComponent]
+  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent, CarDetailsComponent, RentComponent, RentedCarComponent, SearchComponent]
 })
 export class MainModule { }
