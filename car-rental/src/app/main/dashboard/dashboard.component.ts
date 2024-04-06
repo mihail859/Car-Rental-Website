@@ -60,7 +60,7 @@ export class DashboardComponent implements OnInit {
   isAdminHere(){
     return this.apiService.isAdmin();
   }
-  unrent(carId: number){
+  unrent(carId: string){
     console.log("From unrenting...", carId);
     const updatedCar = {
       "isRented": {
@@ -80,5 +80,9 @@ export class DashboardComponent implements OnInit {
       }
     )
 
+  }
+
+  getCarId(car: any): string {
+    return car._id ? car._id : car.id;
   }
 }

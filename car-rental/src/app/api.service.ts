@@ -51,7 +51,7 @@ export class ApiService {
     }
   }
 
-  patchCar(id: number, data: any): Observable<any>{
+  patchCar(id: string, data: any): Observable<any>{
     return this.http.patch(`${this.jsonStoreUrl}cars/${id}`, data)
   }
 
@@ -69,5 +69,12 @@ export class ApiService {
       return null; 
     }
   }
+
+  postCar(data: carInterface){
+    return this.http.post<carInterface>(`${this.jsonStoreUrl}cars`, data)
+  }
   
+  getCarId(car: any): string {
+    return car._id ? car._id : car.id;
+  }
 }

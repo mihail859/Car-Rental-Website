@@ -21,7 +21,7 @@ export class RentComponent implements OnInit{
      this.routes.params.subscribe(params => {
       const carId = params['id'];
       this.idOfTheCar = carId;
-      console.log(carId);
+      console.log(this.idOfTheCar);
       
       this.getCarInformation(carId)
       
@@ -56,11 +56,12 @@ export class RentComponent implements OnInit{
         }
       }; 
       console.log(updatedCar);
+      
   
-      this.apiService.patchCar(this.carInfo?.id, updatedCar).subscribe(
+      this.apiService.patchCar(this.getCarId(this.carInfo), updatedCar).subscribe(
         response => {
           console.log('Patch successful:', response);
-          this.router.navigate([`/rented/${this.carInfo?.id}`]);
+          this.router.navigate([`/rented/${this.getCarId(this.carInfo)}`]);
         },
         error => {
           console.error('Patch error:', error);
@@ -82,5 +83,8 @@ export class RentComponent implements OnInit{
         console.log('Error:', error); 
       }
     );
+  }
+  getCarId(car: any): string {
+    return car._id ? car._id : car.id;
   }
 }

@@ -6,6 +6,7 @@ import { RegisterComponent } from '../main/register/register.component';
 import { DashboardComponent } from '../main/dashboard/dashboard.component';
 import { RentedCarComponent } from '../main/rented-car/rented-car.component';
 import { SearchComponent } from '../main/search/search.component';
+import { CreateComponent } from '../main/create/create.component';
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
     {path: "register", component: RegisterComponent},
     { path: 'dashboard', component: DashboardComponent},
     { path: 'rented', component: RentedCarComponent},
-    { path: "search", component: SearchComponent}
+    { path: "search", component: SearchComponent},
+    { path: 'create', component: CreateComponent}
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@
   </nav>
 
   <nav *ngIf="isAdminHere()">
-    <a routerLink="home">Create</a>
+    <a routerLink="create">Create</a>
     <a routerLink="dashboard">Cars</a>
     <a routerLink="search">Search</a>
     <ng-container *ngIf="!isAuthenticated(); else loggedInLinks">

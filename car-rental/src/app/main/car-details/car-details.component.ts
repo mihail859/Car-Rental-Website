@@ -25,4 +25,7 @@ export class CarDetailsComponent implements OnInit {
   isUserLoggedIn(): boolean {
     return this.apiService.updateAuthenticationStatus();
   }
+  getCarId(car: any): string {
+    return car._id ? car._id : car.id;
+  }
 }
