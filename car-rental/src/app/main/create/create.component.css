@@ -24,7 +24,8 @@
   }
   
   .car-form input[type="text"],
-  .car-form input[type="number"] {
+  .car-form input[type="number"],
+  .car-form input[type="year"] {
     width: 100%;
     padding: 8px;
     border-radius: 3px;
