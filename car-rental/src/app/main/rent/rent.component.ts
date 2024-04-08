@@ -73,7 +73,7 @@ export class RentComponent implements OnInit{
     rentForm.resetForm();
    }
 
-   getCarInformation(id: number): void {
+   getCarInformation(id: string ): void {
     this.apiService.getCarById(id).subscribe(
       (data: carInterface) => {
         this.carInfo = data; 

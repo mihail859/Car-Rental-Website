@@ -1,1 +1,40 @@
-<p>edit works!</p>
+<div class="form-wrapper" *ngIf="newCar">
+    <form #carForm="ngForm" (ngSubmit)="submitForm(carForm)" class="car-form">
+  
+      <div class="elementsWrapper">
+        
+          <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" [(ngModel)]="newCar.price" required>
+          </div>
+
+          <div>
+            <label for="engine">Engine:</label>
+            <input type="text" id="engine" name="engine" [(ngModel)]="newCar.details.engine" required>
+          </div>
+       
+  
+       
+        
+          <div>
+            <label for="mileage">Mileage:</label>
+            <input type="number" id="mileage" name="mileage" [(ngModel)]="newCar.details.mileage" required>
+          </div>
+  
+          <div>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" [(ngModel)]="newCar.details.description" required>
+          </div>
+
+          <div>
+            <label for="image">Image:</label>
+            <input type="text" id="image" name="image" [(ngModel)]="newCar.details.image" required>
+          </div>
+
+        </div>
+    
+  
+      <button type="submit">Edit</button>
+    </form>
+  </div>
+  

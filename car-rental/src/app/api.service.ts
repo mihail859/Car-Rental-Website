@@ -39,7 +39,7 @@ export class ApiService {
      return this.http.get<carInterface>(`${this.jsonStoreUrl}/cars`)
   }
 
-  getCarById(id: number){
+  getCarById(id: string | null){
     return this.http.get<carInterface>(`${this.jsonStoreUrl}/cars/${id}`)
   }
 
@@ -51,7 +51,7 @@ export class ApiService {
     }
   }
 
-  patchCar(id: string, data: any): Observable<any>{
+  patchCar(id: string | null, data: any): Observable<any>{
     return this.http.patch(`${this.jsonStoreUrl}cars/${id}`, data)
   }
 
