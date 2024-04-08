@@ -77,4 +77,8 @@ export class ApiService {
   getCarId(car: any): string {
     return car._id ? car._id : car.id;
   }
+
+  delete(id: string | null){
+    return this.http.delete(`${this.jsonStoreUrl}cars/${id}`)
+  }
 }

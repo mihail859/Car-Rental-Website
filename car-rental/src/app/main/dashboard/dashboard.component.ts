@@ -85,4 +85,16 @@ export class DashboardComponent implements OnInit {
   getCarId(car: any): string {
     return car._id ? car._id : car.id;
   }
+
+  deleteCarByID(id: string | null){
+    this.apiService.delete(id).subscribe(
+      response => {
+        console.log("Deleted")
+        this.getData()
+      },
+      error => {
+        console.log("Error: " + error)
+      }
+    )
+  }
 }
