@@ -12,6 +12,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { RentedCarComponent } from './rented-car/rented-car.component';
 import { SearchComponent } from './search/search.component';
 import { CreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
 
 
 
@@ -28,13 +29,16 @@ import { CreateComponent } from './create/create.component';
     LoadingComponent,
     RentedCarComponent,
     SearchComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     MainRoutingModule
   ],
-  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent, CarDetailsComponent, RentComponent, RentedCarComponent, SearchComponent, CreateComponent]
+  exports: [HomeComponent, LoginComponent, RegisterComponent, DashboardComponent,
+     CarDetailsComponent, RentComponent, 
+     RentedCarComponent, SearchComponent, CreateComponent, EditComponent]
 })
 export class MainModule { }

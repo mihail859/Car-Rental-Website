@@ -26,7 +26,7 @@
 
       <a class="details-btn"  [routerLink]="['/details', getCarId(car)]" *ngIf="car.isRented.user === 'none' && !isAdminHere()" >Details</a>
       <a class="unrent-btn"  *ngIf="isAdminHere() && car.isRented.user !== 'none'" (click)="unrent(getCarId(car))">Unrent</a>
-      <a class="details-btn" [routerLink]="['/edit', car.id]" *ngIf="isAdminHere() && car.isRented.user === 'none'" >Edit</a>
+      <a class="details-btn" [routerLink]="['/edit', getCarId(car)]" *ngIf="isAdminHere() && car.isRented.user === 'none'" >Edit</a>
       
     </div>
   </div>
