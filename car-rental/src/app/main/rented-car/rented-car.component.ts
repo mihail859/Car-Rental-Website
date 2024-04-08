@@ -11,6 +11,7 @@ export class RentedCarComponent implements OnInit {
   car: carInterface[] = [];
   totalPrice: number = 0;
   isCars: boolean = true;
+  days!: number;
   
   constructor(private apiService: ApiService) {}
 
@@ -41,6 +42,7 @@ export class RentedCarComponent implements OnInit {
     const startDate = new Date(this.car[0].isRented.period.split(" to ")[0]);
     const endDate = new Date(this.car[0].isRented.period.split(" to ")[1]);
     const daysRented = Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24));
+    this.days = daysRented;
     this.totalPrice += this.car[0].price * daysRented;
 
     console.log(daysRented);

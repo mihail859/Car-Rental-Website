@@ -97,4 +97,11 @@ export class DashboardComponent implements OnInit {
       }
     )
   }
+  getMailtoLink(user: string | User): string | null {
+    if (typeof user === 'string') {
+      return null; 
+    } else {
+      return 'mailto:' + user.email; 
+    }
+  }
 }
