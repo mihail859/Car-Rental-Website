@@ -55,7 +55,6 @@ export class DashboardComponent implements OnInit {
   
 
   calculateWidth() {
-    const screenWidth = window.innerWidth;
     const maxCarsPerRow = 5;
     const itemWidthPercentage = 100 / maxCarsPerRow;
     return `calc(${itemWidthPercentage}% - 25px)`; 
