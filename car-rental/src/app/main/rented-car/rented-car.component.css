@@ -22,9 +22,8 @@
     max-width: 850px; 
     margin: 0 auto; 
     gap: 80px;
-    background-color: whitesmoke;
+    background-color: rgb(150, 150, 150);
     border-radius: 8px;
-    padding-bottom: 5em;
 }
 .information{
     padding-right: 50px;
@@ -41,8 +40,8 @@
   }
 
 .rented:hover {
-    transform: scale(1.05); /* Enlarge on hover */
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1); 
 }
 
 .rented .img {
