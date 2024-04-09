@@ -50,7 +50,8 @@ export class RentComponent implements OnInit{
           "user": {
               "id": id,
               "email": email,
-              "license": license
+              "license": license,
+              "name": firstName + " " + lastName
           },
           "period": `From ${dateFrom} to ${dateTo}`
         }

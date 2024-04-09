@@ -38,4 +38,5 @@ export interface User{
     id: string;
     email: string;
     license: string;
+    name: string
 }

@@ -17,8 +17,11 @@
 
       <!-- admin -->
       <div class="item-info" *ngIf="isAdminHere() && car.isRented.user !== 'none'">
-        <p >Email: {{ isUser(car.isRented.user) ? car.isRented.user.email : car.isRented.user }}</p>
-        <p> License: {{isUser(car.isRented.user) ? car.isRented.user.license : car.isRented.user }}</p>
+        <p> Rented by: {{isUser(car.isRented.user) ? car.isRented.user.name : ""}}</p>
+        <p >Email: {{ isUser(car.isRented.user) ? car.isRented.user.email : ""}}</p>
+        <p> License: {{isUser(car.isRented.user) ? car.isRented.user.license : "" }}</p>
+        <p>Total Payment: <span class="payment">{{ calculateTotalPrice(car.isRented.period, car.price) | currency: 'EUR' }}</span></p>
+
 
         <p *ngIf="car.isRented.user !== 'none'" class="rented">{{car.isRented.period}}<span class="red-cross">✘</span></p>
 

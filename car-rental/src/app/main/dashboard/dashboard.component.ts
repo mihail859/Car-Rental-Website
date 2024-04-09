@@ -13,6 +13,9 @@ export class DashboardComponent implements OnInit {
   loading: boolean = false; 
   isAdmin: boolean = false;
   carArr!: carInterface[];
+  car!: carInterface[];
+  days!: number;
+  totalPrice!: number;
 
   constructor(private apiService: ApiService, private router: Router, private route: ActivatedRoute) {}
 
@@ -119,5 +122,12 @@ export class DashboardComponent implements OnInit {
     } else {
       return 'mailto:' + user.email; 
     }
+  }
+  calculateTotalPrice(period: string, price: number){
+    const startDate = new Date(period.split(" to ")[0]);
+    const endDate = new Date(period.split(" to ")[1]);
+    const daysRented = Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24));
+    this.days = daysRented;
+    return price * daysRented;
   }
 }

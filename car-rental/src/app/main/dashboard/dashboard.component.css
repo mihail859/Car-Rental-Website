@@ -129,3 +129,8 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.payment{
+  font-weight: bold;
+    color: #6c0746;
+}
