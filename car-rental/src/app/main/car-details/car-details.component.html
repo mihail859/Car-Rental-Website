@@ -14,7 +14,7 @@
             <h3>Mileage: <span>{{car.details.fuelType}}</span></h3>
             <h3>Condition: <span>{{car.details.condition}}</span></h3>
             <h3>Description</h3>
-            <p>{{car.details.description}}</p>
+            <span>{{car.details.description}}</span>
         </div>
         <div class="btns">
             <a class="details-btn" *ngIf="isUserLoggedIn(); else notLoggedIn" [routerLink]="['/rent', getCarId(car)]">Rent</a>
