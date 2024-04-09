@@ -20,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     CoreModule,
     MainModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

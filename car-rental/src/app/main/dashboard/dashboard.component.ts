@@ -61,24 +61,31 @@ export class DashboardComponent implements OnInit {
     return this.apiService.isAdmin();
   }
   unrent(carId: string){
-    console.log("From unrenting...", carId);
-    const updatedCar = {
-      "isRented": {
-        "user": "none",
-        "period": `none`
+    const isConfirmed = window.confirm("Are you sure you want to unrent this car?");
+      if (isConfirmed){
+        console.log("From unrenting...", carId);
+        const updatedCar = {
+          "isRented": {
+            "user": "none",
+            "period": `none`
+          }
+        }; 
+        this.apiService.patchCar(carId, updatedCar).subscribe(
+          response => {
+            console.log('Patch successful:', response);
+            this.router.navigate([`dashboard`]);
+            this.getData();
+          },
+          error => {
+            console.error('Patch error:', error);
+            
+          }
+        )
       }
-    }; 
-    this.apiService.patchCar(carId, updatedCar).subscribe(
-      response => {
-        console.log('Patch successful:', response);
-        this.router.navigate([`dashboard`]);
-        this.getData();
-      },
-      error => {
-        console.error('Patch error:', error);
-        
-      }
-    )
+   
+         
+
+    
 
   }
 
@@ -86,17 +93,26 @@ export class DashboardComponent implements OnInit {
     return car._id ? car._id : car.id;
   }
 
-  deleteCarByID(id: string | null){
-    this.apiService.delete(id).subscribe(
-      response => {
-        console.log("Deleted")
-        this.getData()
-      },
-      error => {
-        console.log("Error: " + error)
+  deleteCarByID(id: string | null) {
+    if (id) { 
+      const isConfirmed = window.confirm("Are you sure you want to delete this car?");
+      if (isConfirmed) {
+        this.apiService.delete(id).subscribe(
+          response => {
+            console.log("Deleted");
+            this.getData();
+          },
+          error => {
+            console.log("Error: " + error);
+          }
+        );
       }
-    )
+    } else {
+      console.log("Invalid car ID");
+    }
   }
+  
+  
   getMailtoLink(user: string | User): string | null {
     if (typeof user === 'string') {
       return null; 
