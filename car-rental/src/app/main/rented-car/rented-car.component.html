@@ -8,7 +8,7 @@
             <h2>{{c.brand}} {{c.model}}</h2>
             <h3> Rented:  <span>{{c.isRented.period}}</span></h3>
             <h3>Days: <span>{{days}} days</span></h3>
-            <h3>Total Price: {{ totalPrice | currency:'EUR' }}</h3>
+            <h3>Total Price: <span>{{ totalPrice | currency:'EUR' }}</span></h3>
     
         </div>
     </section>
