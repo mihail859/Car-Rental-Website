@@ -7,7 +7,7 @@
   }
   
   .car-form {
-    background-color: #c986ff;
+    background-color: #717171;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,7 @@
   .car-form button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #263a50;
     color: #fff;
     border: none;
     border-radius: 3px;
